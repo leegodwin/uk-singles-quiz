@@ -10,7 +10,6 @@ const difficultyModeSelect = document.getElementById("difficulty-mode");
 const playerLabel = document.getElementById("player-label");
 const questionTitle = document.getElementById("question-title");
 const questionNews = document.getElementById("question-news");
-const questionSource = document.getElementById("question-source");
 const progressLabel = document.getElementById("progress-label");
 const optionsGrid = document.getElementById("options-grid");
 
@@ -115,13 +114,9 @@ function renderQuestion() {
   }));
 
   question.currentOptions = options;
-  const source = getSourceMetaForYear(question.year);
 
   questionTitle.textContent = String(question.year);
   questionNews.textContent = question.newsStory;
-  questionSource.textContent = source.label;
-  questionSource.classList.remove("official", "secondary");
-  questionSource.classList.add(source.kind);
   progressLabel.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
 
   optionsGrid.innerHTML = "";
@@ -369,20 +364,6 @@ function buildQuestionsForMode(mode) {
   if (targetCount >= pool.length) return pool;
 
   return shuffleChoices(pool).slice(0, targetCount).sort((a, b) => a.year - b.year);
-}
-
-function getSourceMetaForYear(year) {
-  if (year >= 2004) {
-    return {
-      kind: "official",
-      label: "Source: Official Charts"
-    };
-  }
-
-  return {
-    kind: "secondary",
-    label: "Source: Secondary historical chart references"
-  };
 }
 
 function getRenderedLeaderboardRows(mode) {
