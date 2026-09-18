@@ -282,8 +282,9 @@ input[type="text"] {
 .quiz-head {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   gap: 12px;
-  align-items: flex-start;
+  margin-bottom: 4px;
 }
 
 .player-label {
@@ -292,17 +293,54 @@ input[type="text"] {
   color: var(--ink-soft);
 }
 
-.progress-wrap p {
+.progress-label {
   margin: 0;
-  text-align: right;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.year-block {
+  margin: 8px 0 12px;
 }
 
 #question-title {
-  margin-top: 6px;
+  margin: 0 0 6px;
   font-family: "Bebas Neue", sans-serif;
-  letter-spacing: 1px;
-  font-size: clamp(2rem, 5vw, 3rem);
-  line-height: 0.95;
+  letter-spacing: 2px;
+  font-size: clamp(4rem, 14vw, 7rem);
+  line-height: 0.9;
+  color: var(--accent-deep);
+}
+
+.news-panel {
+  background: var(--card);
+  border: 1px solid var(--card-edge);
+  border-radius: 12px;
+  padding: 10px 14px 12px;
+  box-shadow: 0 4px 14px rgba(45, 28, 12, 0.1);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  margin-bottom: 4px;
+}
+
+.news-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-deep);
+  margin-bottom: 4px;
+}
+
+.question-news {
+  margin: 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.4;
 }
 
 .question-prompt {
@@ -346,6 +384,8 @@ input[type="text"] {
   text-align: left;
   cursor: pointer;
   overflow: hidden;
+  display: flex;
+  align-items: stretch;
   box-shadow: 0 6px 18px rgba(62, 43, 26, 0.08);
   transition: transform 120ms ease, box-shadow 120ms ease;
 }
@@ -360,26 +400,36 @@ input[type="text"] {
 }
 
 .option-cover {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 92px;
+  min-width: 92px;
+  height: 92px;
   object-fit: cover;
   display: block;
+  flex-shrink: 0;
   background: linear-gradient(145deg, #eadcc8, #fdf7ee);
 }
 
 .option-body {
-  padding: 10px 12px 12px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
 }
 
 .option-title {
-  margin: 0 0 4px;
+  margin: 0 0 5px;
   font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.25;
 }
 
 .option-artist {
   margin: 0;
   color: var(--ink-soft);
-  font-size: 0.9rem;
+  font-size: 1rem;
+  line-height: 1.3;
 }
 
 .option-btn.correct {
@@ -392,11 +442,6 @@ input[type="text"] {
   box-shadow: 0 0 0 2px rgba(197, 59, 40, 0.16);
 }
 
-.quiz-controls {
-  margin-top: 16px;
-  display: flex;
-  justify-content: flex-end;
-}
 
 .result-card {
   text-align: center;

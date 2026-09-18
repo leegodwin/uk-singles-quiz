@@ -1,397 +1,402 @@
 const QUIZ_DATA = [
   {
     year: 1985,
+    newsStory: "Live Aid concert watched by 1.9 billion people raises funds for Ethiopian famine relief",
     choices: [
-      { title: "The Power of Love", artist: "Jennifer Rush" },
-      { title: "I Know Him So Well", artist: "Elaine Paige & Barbara Dickson" },
-      { title: "Take On Me", artist: "a-ha" },
-      { title: "Into the Groove", artist: "Madonna" }
+      { position: 1, title: "The Power of Love", artist: "Jennifer Rush" },
+      { position: 2, title: "I Know Him So Well", artist: "Elaine Paige & Barbara Dickson" },
+      { position: 3, title: "19", artist: "Paul Hardcastle" },
+      { position: 4, title: "Easy Lover", artist: "Philip Bailey & Phil Collins" }
     ]
   },
   {
     year: 1986,
+    newsStory: "Chernobyl nuclear disaster sends a radioactive cloud across Europe",
     choices: [
-      { title: "Don't Leave Me This Way", artist: "The Communards" },
-      { title: "True Blue", artist: "Madonna" },
-      { title: "The Lady in Red", artist: "Chris de Burgh" },
-      { title: "A Different Corner", artist: "George Michael" }
+      { position: 1, title: "Don't Leave Me This Way", artist: "The Communards" },
+      { position: 2, title: "Every Loser Wins", artist: "Nick Berry" },
+      { position: 3, title: "A Different Corner", artist: "George Michael" },
+      { position: 4, title: "West End Girls", artist: "Pet Shop Boys" }
     ]
   },
   {
     year: 1987,
+    newsStory: "The Great Storm batters southern England; Black Monday crashes global stock markets",
     choices: [
-      { title: "Never Gonna Give You Up", artist: "Rick Astley" },
-      { title: "I Wanna Dance with Somebody", artist: "Whitney Houston" },
-      { title: "(Is This the Way to) Amarillo", artist: "Tony Christie ft Peter Kay" },
-      { title: "That's My Goal", artist: "Shayne Ward" },
-      { title: "Axel F", artist: "Crazy Frog" },
-      { title: "You're Beautiful", artist: "James Blunt" }
+      { position: 1, title: "Never Gonna Give You Up", artist: "Rick Astley" },
+      { position: 2, title: "La Bamba", artist: "Los Lobos" },
+      { position: 3, title: "I Wanna Dance with Somebody (Who Loves Me)", artist: "Whitney Houston" },
+      { position: 4, title: "Nothing's Gonna Stop Us Now", artist: "Starship" }
     ]
   },
   {
     year: 1988,
+    newsStory: "Pan Am Flight 103 bombed over Lockerbie, killing 270 people",
     choices: [
-      { title: "Mistletoe and Wine", artist: "Cliff Richard" },
-      { title: "Doctorin' the Tardis", artist: "The Timelords" },
-      { title: "Perfect Day", artist: "Various Artists" },
-      { title: "That's My Goal", artist: "Shayne Ward" },
-      { title: "Axel F", artist: "Crazy Frog" },
-      { title: "You're Beautiful", artist: "James Blunt" }
+      { position: 1, title: "Mistletoe and Wine", artist: "Cliff Richard" },
+      { position: 2, title: "I Should Be So Lucky", artist: "Kylie Minogue" },
+      { position: 3, title: "The Only Way Is Up", artist: "Yazz & The Plastic Population" },
+      { position: 4, title: "Perfect", artist: "Fairground Attraction" }
     ]
   },
   {
     year: 1989,
+    newsStory: "The Berlin Wall falls as communist regimes collapse across Eastern Europe",
     choices: [
-      { title: "Ride on Time", artist: "Black Box" },
-      { title: "Eternal Flame", artist: "The Bangles" },
-      { title: "Ferry 'Cross the Mersey", artist: "The Christians, Holly Johnson, Paul McCartney" },
-      { title: "A Moment Like This", artist: "Leona Lewis" },
-      { title: "Hips Don't Lie", artist: "Shakira ft Wyclef Jean" },
-      { title: "I Don't Feel Like Dancin'", artist: "Scissor Sisters" }
+      { position: 1, title: "Ride on Time", artist: "Black Box" },
+      { position: 2, title: "Back to Life (However Do You Want Me)", artist: "Soul II Soul ft Caron Wheeler" },
+      { position: 3, title: "Eternal Flame", artist: "The Bangles" },
+      { position: 4, title: "Like a Prayer", artist: "Madonna" }
     ]
   },
   {
     year: 1990,
+    newsStory: "Nelson Mandela freed after 27 years in prison; Iraq invades Kuwait",
     choices: [
-      { title: "Unchained Melody", artist: "The Righteous Brothers" },
-      { title: "Nothing Compares 2 U", artist: "Sinead O'Connor" },
-      { title: "Sacrifice", artist: "Elton John" },
-      { title: "It Must Have Been Love", artist: "Roxette" },
-      { title: "Grace Kelly", artist: "Mika" },
-      { title: "When You Believe", artist: "Leon Jackson" }
+      { position: 1, title: "Unchained Melody", artist: "The Righteous Brothers" },
+      { position: 2, title: "Nothing Compares 2 U", artist: "Sinead O'Connor" },
+      { position: 3, title: "Sacrifice / Healing Hands", artist: "Elton John" },
+      { position: 4, title: "Step by Step", artist: "New Kids on the Block" }
     ]
   },
   {
     year: 1991,
+    newsStory: "Gulf War liberates Kuwait; the Soviet Union dissolves",
     choices: [
-      { title: "(Everything I Do) I Do It for You", artist: "Bryan Adams" },
-      { title: "Bohemian Rhapsody / These Are the Days of Our Lives", artist: "Queen" },
-      { title: "I'm Too Sexy", artist: "Right Said Fred" },
-      { title: "Hero", artist: "X Factor Finalists" },
-      { title: "I Kissed a Girl", artist: "Katy Perry" }
+      { position: 1, title: "(Everything I Do) I Do It for You", artist: "Bryan Adams" },
+      { position: 2, title: "Any Dream Will Do", artist: "Jason Donovan" },
+      { position: 3, title: "Bohemian Rhapsody / These Are the Days of Our Lives", artist: "Queen" },
+      { position: 4, title: "Unbelievable", artist: "EMF" }
     ]
   },
   {
     year: 1992,
+    newsStory: "Black Wednesday forces the pound out of the European Exchange Rate Mechanism",
     choices: [
-      { title: "I Will Always Love You", artist: "Whitney Houston" },
-      { title: "Stay", artist: "Shakespears Sister" },
-      { title: "Would I Lie to You?", artist: "Charles & Eddie" },
-      { title: "Rhythm Is a Dancer", artist: "Snap!" },
-      { title: "Just Dance", artist: "Lady Gaga" },
-      { title: "Fight for This Love", artist: "Cheryl Cole" }
+      { position: 1, title: "I Will Always Love You", artist: "Whitney Houston" },
+      { position: 2, title: "Would I Lie to You?", artist: "Charles & Eddie" },
+      { position: 3, title: "Rhythm Is a Dancer", artist: "Snap!" },
+      { position: 4, title: "Ain't No Doubt", artist: "Jimmy Nail" }
     ]
   },
   {
     year: 1993,
+    newsStory: "The Maastricht Treaty comes into force, creating the European Union",
     choices: [
-      { title: "I'd Do Anything for Love", artist: "Meat Loaf" },
-      { title: "No Limit", artist: "2 Unlimited" },
-      { title: "Mr Vain", artist: "Culture Beat" },
-      { title: "When We Collide", artist: "Matt Cardle" },
-      { title: "Just the Way You Are (Amazing)", artist: "Bruno Mars" },
-      { title: "Only Girl (In the World)", artist: "Rihanna" }
+      { position: 1, title: "I'd Do Anything for Love (But I Won't Do That)", artist: "Meat Loaf" },
+      { position: 2, title: "Mr Vain", artist: "Culture Beat" },
+      { position: 3, title: "No Limit", artist: "2 Unlimited" },
+      { position: 4, title: "Boom! Shake the Room", artist: "DJ Jazzy Jeff & The Fresh Prince" }
     ]
   },
   {
     year: 1994,
+    newsStory: "The Channel Tunnel opens; Nelson Mandela becomes South Africa's first Black President",
     choices: [
-      { title: "Love Is All Around", artist: "Wet Wet Wet" },
-      { title: "Saturday Night", artist: "Whigfield" },
-      { title: "Cotton Eye Joe", artist: "Rednex" },
-      { title: "Party Rock Anthem", artist: "LMFAO ft Lauren Bennett & GoonRock" },
-      { title: "Price Tag", artist: "Jessie J ft B.o.B" }
+      { position: 1, title: "Love Is All Around", artist: "Wet Wet Wet" },
+      { position: 2, title: "Saturday Night", artist: "Whigfield" },
+      { position: 3, title: "Cotton Eye Joe", artist: "Rednex" },
+      { position: 4, title: "Things Can Only Get Better", artist: "D:Ream" }
     ]
   },
   {
     year: 1995,
+    newsStory: "Oklahoma City bombing kills 168; Oasis and Blur battle for chart supremacy",
     choices: [
-      { title: "Unchained Melody / White Cliffs of Dover", artist: "Robson & Jerome" },
-      { title: "Gangsta's Paradise", artist: "Coolio ft L.V." },
-      { title: "Fairground", artist: "Simply Red" },
-      { title: "Earth Song", artist: "Michael Jackson" },
-      { title: "We Are Young", artist: "fun. ft Janelle Monae" },
-      { title: "Titanium", artist: "David Guetta ft Sia" }
+      { position: 1, title: "Unchained Melody / White Cliffs of Dover", artist: "Robson & Jerome" },
+      { position: 2, title: "Gangsta's Paradise", artist: "Coolio ft L.V." },
+      { position: 3, title: "Fairground", artist: "Simply Red" },
+      { position: 4, title: "Boom Boom Boom", artist: "The Outhere Brothers" }
     ]
   },
   {
     year: 1996,
+    newsStory: "Dolly the sheep becomes the first cloned mammal; Dunblane school massacre shocks UK",
     choices: [
-      { title: "Killing Me Softly", artist: "Fugees" },
-      { title: "Wannabe", artist: "Spice Girls" },
-      { title: "Breathe", artist: "The Prodigy" },
-      { title: "Don't Speak", artist: "No Doubt" },
-      { title: "Let Her Go", artist: "Passenger" }
+      { position: 1, title: "Wannabe", artist: "Spice Girls" },
+      { position: 2, title: "Killing Me Softly", artist: "Fugees" },
+      { position: 3, title: "Forever Love", artist: "Gary Barlow" },
+      { position: 4, title: "Firestarter", artist: "The Prodigy" }
     ]
   },
   {
     year: 1997,
+    newsStory: "Princess Diana dies in a Paris car crash; Tony Blair wins a historic Labour landslide",
     choices: [
-      { title: "Candle in the Wind 1997", artist: "Elton John" },
-      { title: "Barbie Girl", artist: "Aqua" },
-      { title: "I'll Be Missing You", artist: "Puff Daddy & Faith Evans" },
-      { title: "Perfect Day", artist: "Various Artists" },
-      { title: "All of Me", artist: "John Legend" },
-      { title: "Waves", artist: "Mr Probz" }
+      { position: 1, title: "Candle in the Wind 1997", artist: "Elton John" },
+      { position: 2, title: "Barbie Girl", artist: "Aqua" },
+      { position: 3, title: "I'll Be Missing You", artist: "Puff Daddy & Faith Evans" },
+      { position: 4, title: "MMMBop", artist: "Hanson" }
     ]
   },
   {
     year: 1998,
+    newsStory: "The Good Friday Agreement brings hope for lasting peace in Northern Ireland",
     choices: [
-      { title: "Believe", artist: "Cher" },
-      { title: "My Heart Will Go On", artist: "Celine Dion" },
-      { title: "No Matter What", artist: "Boyzone" },
-      { title: "Cheerleader (Felix Jaehn Remix)", artist: "OMI" },
-      { title: "Take Me to Church", artist: "Hozier" },
-      { title: "Love Me Like You Do", artist: "Ellie Goulding" }
+      { position: 1, title: "Believe", artist: "Cher" },
+      { position: 2, title: "My Heart Will Go On", artist: "Celine Dion" },
+      { position: 3, title: "No Matter What", artist: "Boyzone" },
+      { position: 4, title: "Angels", artist: "Robbie Williams" }
     ]
   },
   {
     year: 1999,
+    newsStory: "NATO bombs Serbia; fears mount over the Y2K bug as the millennium approaches",
     choices: [
-      { title: "...Baby One More Time", artist: "Britney Spears" },
-      { title: "Blue (Da Ba Dee)", artist: "Eiffel 65" },
-      { title: "Mambo No. 5", artist: "Lou Bega" },
-      { title: "When the Going Gets Tough", artist: "Boyzone" },
-      { title: "I Took a Pill in Ibiza", artist: "Mike Posner" }
+      { position: 1, title: "...Baby One More Time", artist: "Britney Spears" },
+      { position: 2, title: "Mambo No. 5", artist: "Lou Bega" },
+      { position: 3, title: "Blue (Da Ba Dee)", artist: "Eiffel 65" },
+      { position: 4, title: "Livin' la Vida Loca", artist: "Ricky Martin" }
     ]
   },
   {
     year: 2000,
+    newsStory: "A total solar eclipse crosses the UK; the Millennium Dome opens to mixed reviews",
     choices: [
-      { title: "Can We Fix It?", artist: "Bob the Builder" },
-      { title: "Pure Shores", artist: "All Saints" },
-      { title: "It Feels So Good", artist: "Sonique" },
-      { title: "Despacito (Remix)", artist: "Luis Fonsi, Daddy Yankee ft Justin Bieber" },
-      { title: "Castle on the Hill", artist: "Ed Sheeran" },
-      { title: "Unforgettable", artist: "French Montana ft Swae Lee" }
+      { position: 1, title: "Can We Fix It?", artist: "Bob the Builder" },
+      { position: 2, title: "Pure Shores", artist: "All Saints" },
+      { position: 3, title: "It Feels So Good", artist: "Sonique" },
+      { position: 4, title: "The Real Slim Shady", artist: "Eminem" }
     ]
   },
   {
     year: 2001,
+    newsStory: "September 11 attacks kill nearly 3,000 in New York, Washington and Pennsylvania",
     choices: [
-      { title: "It Wasn't Me", artist: "Shaggy ft RikRok" },
-      { title: "Whole Again", artist: "Atomic Kitten" },
-      { title: "Can't Get You Out of My Head", artist: "Kylie Minogue" },
-      { title: "Have a Nice Day", artist: "Stereophonics" },
-      { title: "This Is Me", artist: "Keala Settle & The Greatest Showman Ensemble" }
+      { position: 1, title: "Whole Again", artist: "Atomic Kitten" },
+      { position: 2, title: "Can't Get You Out of My Head", artist: "Kylie Minogue" },
+      { position: 3, title: "It Wasn't Me", artist: "Shaggy ft RikRok" },
+      { position: 4, title: "Pure and Simple", artist: "Hear'Say" }
     ]
   },
   {
     year: 2002,
+    newsStory: "Queen Elizabeth II celebrates her Golden Jubilee; the Queen Mother dies aged 101",
     choices: [
-      { title: "Anything Is Possible / Evergreen", artist: "Will Young" },
-      { title: "Hero", artist: "Enrique Iglesias" },
-      { title: "Dilemma", artist: "Nelly ft Kelly Rowland" },
-      { title: "Just a Little", artist: "Liberty X" },
-      { title: "I Don't Care", artist: "Ed Sheeran & Justin Bieber" },
-      { title: "bad guy", artist: "Billie Eilish" }
+      { position: 1, title: "Anything Is Possible / Evergreen", artist: "Will Young" },
+      { position: 2, title: "Dilemma", artist: "Nelly ft Kelly Rowland" },
+      { position: 3, title: "Just a Little", artist: "Liberty X" },
+      { position: 4, title: "A Little Less Conversation", artist: "Elvis vs JXL" }
     ]
   },
   {
     year: 2003,
+    newsStory: "UK joins the US-led invasion of Iraq; SARS outbreak spreads across Asia",
     choices: [
-      { title: "Where Is the Love?", artist: "The Black Eyed Peas" },
-      { title: "Ignition (Remix)", artist: "R. Kelly" },
-      { title: "Blinding Lights", artist: "Weeknd" },
-      { title: "Dance Monkey", artist: "Tones and I" },
-      { title: "Roses", artist: "SAINt JHN" },
-      { title: "Before You Go", artist: "Lewis Capaldi" }
+      { position: 1, title: "Where Is the Love?", artist: "The Black Eyed Peas" },
+      { position: 2, title: "Spirit in the Sky", artist: "Gareth Gates ft The Kumars" },
+      { position: 3, title: "Ignition (Remix)", artist: "R. Kelly" },
+      { position: 4, title: "Crazy in Love", artist: "Beyoncé ft Jay-Z" }
     ]
   },
   {
     year: 2004,
+    newsStory: "Boxing Day tsunami kills over 230,000 across South and Southeast Asia",
     choices: [
-      { title: "Do They Know It's Christmas?", artist: "Band Aid 20" },
-      { title: "Dragostea Din Tei", artist: "O-Zone" },
-      { title: "Yeah!", artist: "Usher ft Lil Jon & Ludacris" },
-      { title: "good 4 u", artist: "Olivia Rodrigo" },
-      { title: "drivers license", artist: "Olivia Rodrigo" },
-      { title: "Save Your Tears", artist: "Weeknd" }
+      { position: 1, title: "Do They Know It's Christmas?", artist: "Band Aid 20" },
+      { position: 2, title: "Yeah!", artist: "Usher ft Lil Jon & Ludacris" },
+      { position: 3, title: "Mysterious Girl", artist: "Peter Andre" },
+      { position: 4, title: "Leave Right Now", artist: "Will Young" }
     ]
   },
   {
     year: 2005,
+    newsStory: "London bombings kill 52 on 7 July; Hurricane Katrina devastates New Orleans",
     choices: [
-      { title: "(Is This the Way to) Amarillo", artist: "Tony Christie ft Peter Kay" },
-      { title: "Axel F", artist: "Crazy Frog" },
-      { title: "You're Beautiful", artist: "James Blunt" },
-      { title: "Bad Habits", artist: "Ed Sheeran" },
-      { title: "Go", artist: "Cat Burns" }
+      { position: 1, title: "(Is This the Way to) Amarillo", artist: "Tony Christie ft Peter Kay" },
+      { position: 2, title: "Axel F", artist: "Crazy Frog" },
+      { position: 3, title: "You're Beautiful", artist: "James Blunt" },
+      { position: 4, title: "That's My Goal", artist: "Shayne Ward" }
     ]
   },
   {
     year: 2006,
+    newsStory: "Twitter launches; North Korea tests its first nuclear weapon",
     choices: [
-      { title: "Crazy", artist: "Gnarls Barkley" },
-      { title: "Hips Don't Lie", artist: "Shakira ft Wyclef Jean" },
-      { title: "Smile", artist: "Lily Allen" },
-      { title: "Patience", artist: "Take That" },
-      { title: "Escapism.", artist: "RAYE ft 070 Shake" },
-      { title: "Anti-Hero", artist: "Taylor Swift" }
+      { position: 1, title: "Crazy", artist: "Gnarls Barkley" },
+      { position: 2, title: "Hips Don't Lie", artist: "Shakira ft Wyclef Jean" },
+      { position: 3, title: "Smile", artist: "Lily Allen" },
+      { position: 4, title: "Patience", artist: "Take That" }
     ]
   },
   {
     year: 2007,
+    newsStory: "The iPhone goes on sale; Northern Rock bank run sparks UK financial fears",
     choices: [
-      { title: "Bleeding Love", artist: "Leona Lewis" },
-      { title: "Umbrella", artist: "Rihanna ft Jay-Z" },
-      { title: "Shine", artist: "Take That" },
-      { title: "Grace Kelly", artist: "Mika" },
-      { title: "Espresso", artist: "Sabrina Carpenter" }
+      { position: 1, title: "Bleeding Love", artist: "Leona Lewis" },
+      { position: 2, title: "Umbrella", artist: "Rihanna ft Jay-Z" },
+      { position: 3, title: "Grace Kelly", artist: "Mika" },
+      { position: 4, title: "Shine", artist: "Take That" }
     ]
   },
   {
     year: 2008,
+    newsStory: "Global financial crisis triggers the worst recession since the 1930s",
     choices: [
-      { title: "Hallelujah", artist: "Alexandra Burke" },
-      { title: "I Kissed a Girl", artist: "Katy Perry" },
-      { title: "Mercy", artist: "Duffy" },
-      { title: "Sex on Fire", artist: "Kings of Leon" }
+      { position: 1, title: "Hallelujah", artist: "Alexandra Burke" },
+      { position: 2, title: "I Kissed a Girl", artist: "Katy Perry" },
+      { position: 3, title: "Mercy", artist: "Duffy" },
+      { position: 4, title: "Sex on Fire", artist: "Kings of Leon" }
     ]
   },
   {
     year: 2009,
+    newsStory: "Barack Obama inaugurated as US President; Michael Jackson dies aged 50",
     choices: [
-      { title: "Poker Face", artist: "Lady Gaga" },
-      { title: "I Gotta Feeling", artist: "The Black Eyed Peas" },
-      { title: "Halo", artist: "Beyonce" },
-      { title: "Bad Boys", artist: "Alexandra Burke ft Flo Rida" }
+      { position: 1, title: "Poker Face", artist: "Lady Gaga" },
+      { position: 2, title: "Fight for This Love", artist: "Cheryl Cole" },
+      { position: 3, title: "I Gotta Feeling", artist: "The Black Eyed Peas" },
+      { position: 4, title: "Halo", artist: "Beyoncé" }
     ]
   },
   {
     year: 2010,
+    newsStory: "Haiti earthquake kills over 200,000; Deepwater Horizon causes massive Gulf oil spill",
     choices: [
-      { title: "Love the Way You Lie", artist: "Eminem ft Rihanna" },
-      { title: "Just the Way You Are", artist: "Bruno Mars" },
-      { title: "Pass Out", artist: "Tinie Tempah" },
-      { title: "Empire State of Mind (Part II)", artist: "Alicia Keys" }
+      { position: 1, title: "Love the Way You Lie", artist: "Eminem ft Rihanna" },
+      { position: 2, title: "Pass Out", artist: "Tinie Tempah" },
+      { position: 3, title: "Just the Way You Are", artist: "Bruno Mars" },
+      { position: 4, title: "Rude Boy", artist: "Rihanna" }
     ]
   },
   {
     year: 2011,
+    newsStory: "Prince William marries Kate Middleton; Osama bin Laden killed in Pakistan",
     choices: [
-      { title: "Someone Like You", artist: "Adele" },
-      { title: "Party Rock Anthem", artist: "LMFAO" },
-      { title: "Moves Like Jagger", artist: "Maroon 5 ft Christina Aguilera" },
-      { title: "We Found Love", artist: "Rihanna ft Calvin Harris" }
+      { position: 1, title: "Someone Like You", artist: "Adele" },
+      { position: 2, title: "Party Rock Anthem", artist: "LMFAO ft Lauren Bennett & GoonRock" },
+      { position: 3, title: "Moves Like Jagger", artist: "Maroon 5 ft Christina Aguilera" },
+      { position: 4, title: "We Found Love", artist: "Rihanna ft Calvin Harris" }
     ]
   },
   {
     year: 2012,
+    newsStory: "London hosts the Olympic Games; Diamond Jubilee marks the Queen's 60 years on the throne",
     choices: [
-      { title: "Somebody That I Used to Know", artist: "Gotye ft Kimbra" },
-      { title: "Call Me Maybe", artist: "Carly Rae Jepsen" },
-      { title: "Diamonds", artist: "Rihanna" },
-      { title: "Hall of Fame", artist: "The Script ft will.i.am" }
+      { position: 1, title: "Somebody That I Used to Know", artist: "Gotye ft Kimbra" },
+      { position: 2, title: "Call Me Maybe", artist: "Carly Rae Jepsen" },
+      { position: 3, title: "Diamonds", artist: "Rihanna" },
+      { position: 4, title: "Glad You Came", artist: "The Wanted" }
     ]
   },
   {
     year: 2013,
+    newsStory: "Margaret Thatcher dies; Edward Snowden reveals the NSA's mass surveillance programme",
     choices: [
-      { title: "Blurred Lines", artist: "Robin Thicke ft T.I. & Pharrell" },
-      { title: "Get Lucky", artist: "Daft Punk ft Pharrell Williams" },
-      { title: "Wake Me Up", artist: "Avicii" },
-      { title: "Roar", artist: "Katy Perry" }
+      { position: 1, title: "Blurred Lines", artist: "Robin Thicke ft T.I. & Pharrell" },
+      { position: 2, title: "Get Lucky", artist: "Daft Punk ft Pharrell Williams & Nile Rodgers" },
+      { position: 3, title: "Wake Me Up", artist: "Avicii" },
+      { position: 4, title: "Pompeii", artist: "Bastille" }
     ]
   },
   {
     year: 2014,
+    newsStory: "Scotland votes No to independence; MH17 shot down over eastern Ukraine",
     choices: [
-      { title: "Happy", artist: "Pharrell Williams" },
-      { title: "Rather Be", artist: "Clean Bandit ft Jess Glynne" },
-      { title: "All About That Bass", artist: "Meghan Trainor" },
-      { title: "Ghost", artist: "Ella Henderson" }
+      { position: 1, title: "Happy", artist: "Pharrell Williams" },
+      { position: 2, title: "Rather Be", artist: "Clean Bandit ft Jess Glynne" },
+      { position: 3, title: "All About That Bass", artist: "Meghan Trainor" },
+      { position: 4, title: "Thinking Out Loud", artist: "Ed Sheeran" }
     ]
   },
   {
     year: 2015,
+    newsStory: "Paris terror attacks kill 130; over one million refugees reach Europe",
     choices: [
-      { title: "Uptown Funk", artist: "Mark Ronson ft Bruno Mars" },
-      { title: "Cheerleader", artist: "OMI" },
-      { title: "Love Me Like You Do", artist: "Ellie Goulding" },
-      { title: "See You Again", artist: "Wiz Khalifa ft Charlie Puth" }
+      { position: 1, title: "Uptown Funk", artist: "Mark Ronson ft Bruno Mars" },
+      { position: 2, title: "Cheerleader (Felix Jaehn Remix)", artist: "OMI" },
+      { position: 3, title: "Love Me Like You Do", artist: "Ellie Goulding" },
+      { position: 4, title: "Take Me to Church", artist: "Hozier" }
     ]
   },
   {
     year: 2016,
+    newsStory: "UK votes to leave the EU; David Bowie and Prince die; Donald Trump elected US President",
     choices: [
-      { title: "One Dance", artist: "Drake ft Wizkid & Kyla" },
-      { title: "7 Years", artist: "Lukas Graham" },
-      { title: "Cheap Thrills", artist: "Sia" },
-      { title: "Closer", artist: "The Chainsmokers ft Halsey" }
+      { position: 1, title: "One Dance", artist: "Drake ft Wizkid & Kyla" },
+      { position: 2, title: "7 Years", artist: "Lukas Graham" },
+      { position: 3, title: "Cheap Thrills", artist: "Sia" },
+      { position: 4, title: "Cold Water", artist: "Major Lazer ft Justin Bieber & MØ" }
     ]
   },
   {
     year: 2017,
+    newsStory: "Manchester Arena bombing kills 22; Grenfell Tower fire kills 72 in London",
     choices: [
-      { title: "Shape of You", artist: "Ed Sheeran" },
-      { title: "Despacito", artist: "Luis Fonsi & Daddy Yankee ft Justin Bieber" },
-      { title: "Unforgettable", artist: "French Montana ft Swae Lee" },
-      { title: "Human", artist: "Rag'n'Bone Man" }
+      { position: 1, title: "Shape of You", artist: "Ed Sheeran" },
+      { position: 2, title: "Despacito (Remix)", artist: "Luis Fonsi & Daddy Yankee ft Justin Bieber" },
+      { position: 3, title: "Human", artist: "Rag'n'Bone Man" },
+      { position: 4, title: "Castle on the Hill", artist: "Ed Sheeran" }
     ]
   },
   {
     year: 2018,
+    newsStory: "Prince Harry marries Meghan Markle; England reach the World Cup semi-final",
     choices: [
-      { title: "One Kiss", artist: "Calvin Harris & Dua Lipa" },
-      { title: "God's Plan", artist: "Drake" },
-      { title: "Shotgun", artist: "George Ezra" },
-      { title: "These Days", artist: "Rudimental ft Jess Glynne, Macklemore, Dan Caplen" }
+      { position: 1, title: "One Kiss", artist: "Calvin Harris & Dua Lipa" },
+      { position: 2, title: "God's Plan", artist: "Drake" },
+      { position: 3, title: "Shotgun", artist: "George Ezra" },
+      { position: 4, title: "This Is Me", artist: "Keala Settle & The Greatest Showman Ensemble" }
     ]
   },
   {
     year: 2019,
+    newsStory: "Boris Johnson becomes Prime Minister; Brexit deadlock dominates UK politics all year",
     choices: [
-      { title: "Someone You Loved", artist: "Lewis Capaldi" },
-      { title: "Old Town Road", artist: "Lil Nas X" },
-      { title: "bad guy", artist: "Billie Eilish" },
-      { title: "I Don't Care", artist: "Ed Sheeran & Justin Bieber" }
+      { position: 1, title: "Someone You Loved", artist: "Lewis Capaldi" },
+      { position: 2, title: "Old Town Road", artist: "Lil Nas X ft Billy Ray Cyrus" },
+      { position: 3, title: "bad guy", artist: "Billie Eilish" },
+      { position: 4, title: "Señorita", artist: "Shawn Mendes & Camila Cabello" }
     ]
   },
   {
     year: 2020,
+    newsStory: "COVID-19 pandemic causes global lockdowns, killing millions worldwide",
     choices: [
-      { title: "Blinding Lights", artist: "The Weeknd" },
-      { title: "Roses (Imanbek Remix)", artist: "SAINt JHN" },
-      { title: "Rockstar", artist: "DaBaby ft Roddy Ricch" },
-      { title: "Head & Heart", artist: "Joel Corry ft MNEK" }
+      { position: 1, title: "Blinding Lights", artist: "The Weeknd" },
+      { position: 2, title: "Roses (Imanbek Remix)", artist: "SAINt JHN" },
+      { position: 3, title: "Head & Heart", artist: "Joel Corry ft MNEK" },
+      { position: 4, title: "Watermelon Sugar", artist: "Harry Styles" }
     ]
   },
   {
     year: 2021,
+    newsStory: "COVID vaccines roll out worldwide; England reach the Euro 2020 final; COP26 held in Glasgow",
     choices: [
-      { title: "Bad Habits", artist: "Ed Sheeran" },
-      { title: "drivers license", artist: "Olivia Rodrigo" },
-      { title: "Wellerman", artist: "Nathan Evans" },
-      { title: "Shivers", artist: "Ed Sheeran" }
+      { position: 1, title: "Bad Habits", artist: "Ed Sheeran" },
+      { position: 2, title: "drivers license", artist: "Olivia Rodrigo" },
+      { position: 3, title: "Wellerman", artist: "Nathan Evans" },
+      { position: 4, title: "good 4 u", artist: "Olivia Rodrigo" }
     ]
   },
   {
     year: 2022,
+    newsStory: "Queen Elizabeth II dies after 70 years on the throne; Russia invades Ukraine",
     choices: [
-      { title: "As It Was", artist: "Harry Styles" },
-      { title: "Unholy", artist: "Sam Smith & Kim Petras" },
-      { title: "Running Up That Hill", artist: "Kate Bush" },
-      { title: "Peru", artist: "Fireboy DML & Ed Sheeran" }
+      { position: 1, title: "As It Was", artist: "Harry Styles" },
+      { position: 2, title: "Running Up That Hill (A Deal with God)", artist: "Kate Bush" },
+      { position: 3, title: "Unholy", artist: "Sam Smith & Kim Petras" },
+      { position: 4, title: "Heat Waves", artist: "Glass Animals" }
     ]
   },
   {
     year: 2023,
+    newsStory: "ChatGPT sparks a global AI revolution; the Israel-Hamas conflict breaks out",
     choices: [
-      { title: "Flowers", artist: "Miley Cyrus" },
-      { title: "Sprinter", artist: "Dave & Central Cee" },
-      { title: "vampire", artist: "Olivia Rodrigo" },
-      { title: "Escapism.", artist: "RAYE ft 070 Shake" }
+      { position: 1, title: "Flowers", artist: "Miley Cyrus" },
+      { position: 2, title: "Sprinter", artist: "Dave & Central Cee" },
+      { position: 3, title: "vampire", artist: "Olivia Rodrigo" },
+      { position: 4, title: "Anti-Hero", artist: "Taylor Swift" }
     ]
   },
   {
     year: 2024,
+    newsStory: "Labour wins UK general election after 14 years; Donald Trump returns to the White House",
     choices: [
-      { title: "Stick Season", artist: "Noah Kahan" },
-      { title: "Beautiful Things", artist: "Benson Boone" },
-      { title: "Texas Hold 'Em", artist: "Beyonce" },
-      { title: "Lose Control", artist: "Teddy Swims" }
+      { position: 1, title: "Stick Season", artist: "Noah Kahan" },
+      { position: 2, title: "Espresso", artist: "Sabrina Carpenter" },
+      { position: 3, title: "Too Sweet", artist: "Hozier" },
+      { position: 4, title: "Beautiful Things", artist: "Benson Boone" }
     ]
   }
 ];

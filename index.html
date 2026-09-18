@@ -62,23 +62,21 @@
 
     <section id="quiz-screen" class="panel" aria-live="polite">
       <header class="quiz-head">
-        <div>
-          <p id="player-label" class="player-label"></p>
-          <h2 id="question-title">Year</h2>
-        </div>
-        <div class="progress-wrap">
-          <p id="progress-label">Question 1/40</p>
-          <p id="score-label">Score: 0</p>
-        </div>
+        <p id="player-label" class="player-label"></p>
+        <p id="progress-label" class="progress-label">Question 1/40</p>
       </header>
+
+      <div class="year-block">
+        <h2 id="question-title">Year</h2>
+        <div class="news-panel">
+          <span class="news-label">Headline</span>
+          <p id="question-news" class="question-news"></p>
+        </div>
+      </div>
 
       <p class="question-prompt">Which single was the best-selling UK single this year?</p>
       <p id="question-source" class="question-source"></p>
       <div id="options-grid" class="options-grid"></div>
-
-      <div class="quiz-controls">
-        <button id="next-btn" class="btn btn-secondary" disabled>Next Year</button>
-      </div>
     </section>
 
     <section id="result-screen" class="panel">
@@ -89,7 +87,7 @@
         <p id="result-summary"></p>
         <div class="result-actions">
           <button id="play-again-btn" class="btn btn-primary">Play Again</button>
-          <button id="home-btn" class="btn btn-secondary">Back to Welcome</button>
+          <button id="home-btn" class="btn btn-secondary">View Leaderboard</button>
         </div>
       </article>
     </section>
