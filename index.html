@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09040d">
   <title>UK Singles Quiz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +18,8 @@
     <section id="welcome-screen" class="panel active">
       <header class="hero">
         <p class="eyebrow">Music Trivia Challenge</p>
-        <h1>UK Best-Selling Singles Quiz</h1>
+        <h1>Lauren 40 Years</h1>
+        <p class="title-subtitle">Best-Selling UK Singles Quiz</p>
         <p class="subtitle">40 years. 40 winners. Can you pick the top single for every year?</p>
       </header>
 
@@ -27,7 +29,7 @@
           <p>Enter your name to begin and compete on the leaderboard.</p>
           <form id="start-form" autocomplete="off">
             <label for="player-name">Your name</label>
-            <input id="player-name" name="playerName" type="text" maxlength="24" placeholder="e.g. Jamie" required>
+            <input id="player-name" name="playerName" type="text" maxlength="24" placeholder="e.g. Lauren" required>
             <label for="difficulty-mode">Difficulty</label>
             <select id="difficulty-mode" name="difficultyMode" class="mode-select" required>
               <option value="easy">Easy (10 years)</option>
@@ -36,17 +38,15 @@
             </select>
             <button type="submit" class="btn btn-primary">Start</button>
           </form>
-          <div class="source-legend" aria-label="Dataset source legend">
-            <p class="source-legend-title">Question Data Sources</p>
-            <p class="source-legend-row"><span class="source-dot official"></span> 2004-2024: Official Charts</p>
-            <p class="source-legend-row"><span class="source-dot secondary"></span> 1985-2003: Secondary historical chart references</p>
-          </div>
         </article>
 
         <article class="card leaderboard-card">
           <div class="leaderboard-head">
             <h2>Leaderboard</h2>
-            <span id="leaderboard-count" class="badge">0 scores</span>
+            <div class="leaderboard-indicators">
+              <span id="leaderboard-status" class="badge">Local only</span>
+              <span id="leaderboard-count" class="badge">0 scores</span>
+            </div>
           </div>
           <div class="mode-tabs" role="tablist" aria-label="Leaderboard difficulty">
             <button type="button" class="mode-tab active" data-mode="all" role="tab" aria-selected="true">All</button>
@@ -62,23 +62,20 @@
 
     <section id="quiz-screen" class="panel" aria-live="polite">
       <header class="quiz-head">
-        <div>
-          <p id="player-label" class="player-label"></p>
-          <h2 id="question-title">Year</h2>
-        </div>
-        <div class="progress-wrap">
-          <p id="progress-label">Question 1/40</p>
-          <p id="score-label">Score: 0</p>
-        </div>
+        <p id="player-label" class="player-label"></p>
+        <p id="progress-label" class="progress-label">Question 1/40</p>
       </header>
 
-      <p class="question-prompt">Which single was the best-selling UK single this year?</p>
-      <p id="question-source" class="question-source"></p>
-      <div id="options-grid" class="options-grid"></div>
-
-      <div class="quiz-controls">
-        <button id="next-btn" class="btn btn-secondary" disabled>Next Year</button>
+      <div class="year-block">
+        <h2 id="question-title">Year</h2>
+        <div class="news-panel">
+          <span class="news-label">Headline</span>
+          <p id="question-news" class="question-news"></p>
+        </div>
       </div>
+
+      <p class="question-prompt">Which single was the best-selling UK single this year?</p>
+      <div id="options-grid" class="options-grid"></div>
     </section>
 
     <section id="result-screen" class="panel">
@@ -89,13 +86,14 @@
         <p id="result-summary"></p>
         <div class="result-actions">
           <button id="play-again-btn" class="btn btn-primary">Play Again</button>
-          <button id="home-btn" class="btn btn-secondary">Back to Welcome</button>
+          <button id="home-btn" class="btn btn-secondary">View Leaderboard</button>
         </div>
       </article>
     </section>
   </main>
 
   <script src="data.js"></script>
+  <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
